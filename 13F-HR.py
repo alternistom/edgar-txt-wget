@@ -43,7 +43,7 @@ else:
 for line in lines:
     if " " + fileType + " " in line:
 
-        edgarName = re.sub(r" " + str(fileType) + ".*","",line).replace(",","").replace("/","").strip()
+        edgarName = re.sub(r" " + str(fileType) + ".*","",line).replace(",","").replace("/","").replace("\\","").strip()
         print(edgarName)
         edgarLink = line.strip().rsplit(" ", 1)[1]
         print(edgarLink)
